@@ -4,7 +4,7 @@
     "slug": "my-expo-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/my-internal-images/financial-chart.png", //recommended to be used in 1024 x 1024 png file
+    "icon": "./assets/my-internal-images/icon-financial-chart.png", //recommended to be used in 1024 x 1024 png file
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png", //hard to define size due to different device screen sizes
@@ -24,7 +24,9 @@
       }
     },
     "web": {
-      "favicon": "./assets/my-internal-images/financial-chart.png"
+      "favicon": "./assets/my-internal-images/favicon-financial-chart.png",
+      "bundler":  "metro" //webpack was used by default, after new features and assets some failures with web dev mode
+      //metro is the bundler (package creator) provided by react-native 
     }
   }
 }
