@@ -18,7 +18,7 @@ SplashScreen.preventAutoHideAsync();
 const App = () => {
 
   //JavaScript expressions goes outside the return statement, if inside then needs {}
-  const myImage = require('./assets/my-internal-images/financial-chart.png');
+  const myImage = require('./assets/my-internal-images/initial-financial-image.png');
 
   //Defining fonts, which are an array:
   const [fontsLoaded] = useFonts ({
@@ -29,6 +29,7 @@ const App = () => {
 
   const onLayoutRootView = useCallback(async () => {
     if(fontsLoaded) {
+      //await forces synchronizicity of the element
       await SplashScreen.hideAsync();
     }
   }, [fontsLoaded]);
